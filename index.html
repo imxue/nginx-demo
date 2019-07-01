@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nginx</title>
+</head>
+<body>
+	<p>hello nginx</p>
+	<button id="btn">btn</button>
+</body>
+<script type="text/javascript">
+
+	var oReq = new XMLHttpRequest();
+	document.querySelector("#btn").addEventListener('click',() => {
+		oReq.open("GET", "http://127.0.0.1/xx");
+
+		oReq.onreadystatechange = function() {
+    	if (oReq.readyState == 4) {
+    		console.log(oReq.responseText)
+    	}
+    }
+	
+ oReq.send();
+})
+    
+    
+   
+</script>
+</html>
